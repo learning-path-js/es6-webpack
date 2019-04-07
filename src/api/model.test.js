@@ -2,7 +2,7 @@
 
 import {expect} from 'chai'
 import {
-    Account
+    Account, getAccTransactions
 } from "./model"
 
 
@@ -18,4 +18,14 @@ describe('Account', () => {
     xit('this test is in a pending mode', () => {
     });
 });
+
+
+describe('getAccTransactions', () => {
+
+    it('getAccTransactions should return transactions as string', () => {
+        expect(getAccTransactions()).to.equal("100, 200, 300");
+    });
+
+});
+
 
