@@ -1,5 +1,5 @@
 'use strict';
-
+const axios = require('axios');
 
 export class Account {
 
@@ -17,6 +17,10 @@ export class Account {
     }
 }
 
+
+export const getContent = (url) => {
+    return axios.get(url);
+};
 
 export const getAccTransactions = () => {
     const myAccount = new Account(123);
